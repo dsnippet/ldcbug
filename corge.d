@@ -1,0 +1,2 @@
+import waldo;
+class corge {}
