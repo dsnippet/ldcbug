@@ -2,7 +2,7 @@ import thud;
 import qux;
 import corge: corge;
 class foo {
-  foo[foo] map;
+  int[foo] map;
   void fun0(corge ) { }
   void fun1() { }
   void fun2() { }

@@ -1,7 +1,7 @@
-import bar;
-import fred: fred, fred_base;
+import thud;
+import waldo;
 class grault: bar {
-  void func(fred_base ) {func8;}
+  void func() {func8;}
   void func1() {
     assert(false, "func1 was never called");
   }
