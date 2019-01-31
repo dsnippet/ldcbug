@@ -1,3 +1,2 @@
 import foo;
-class waldo: foo { }
-
+class bar: foo {}

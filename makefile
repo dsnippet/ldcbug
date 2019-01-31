@@ -1,19 +1,12 @@
-DMD = ldmd2
-FOOSRC = foo.d bar.d qux.d fred.d corge.d thud.d waldo.d grault.d
-FOOOBJS = $(FOOSRC:.d=.o)
+DMD=ldc2
 clean:
-	rm -rf *.a *.o foobar *.log
-
-libs-ldc: libfoo-ldc.a
+	rm -rf *.o foobar *.log
 
 %.o: %.d
-	$(DMD) -c $(DFLAGS) $^
+	$(DMD) -w -c $(DFLAGS) $^
 
-libfoo-ldc.a: $(FOOOBJS)
-	ar rcs $@ $^
-
-foobar: foobar.d ./libfoo-ldc.a
-	$(DMD) $(DFLAGS) -of$@ -L-ldl -L-lphobos2-ldc $^
+foobar: foobar.o foo.o qux.o corge.o thud.o waldo.o grault.o
+	$(DMD) -w $(DFLAGS) -of$@ -L-ldl -L-lphobos2-ldc $^
 
 run: foobar
 	./foobar

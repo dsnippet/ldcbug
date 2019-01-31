@@ -1,4 +1,3 @@
 import foo;
-class qux {
-  foo[foo] map;
-}
+
+int[foo] map;
