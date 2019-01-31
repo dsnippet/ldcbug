@@ -3,11 +3,5 @@ import qux;
 import corge: corge;
 class foo {
   int[foo] map;
-  void fun0(corge ) { }
-  void fun1() { }
-  void fun2() { }
-  void fun3() { }
-  void fun4() { }
-  void fun5() { }
-  void fun6() { }
+  void fun0(corge) { }
 }
